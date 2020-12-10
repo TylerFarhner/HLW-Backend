@@ -9,6 +9,7 @@ require('dotenv').config();
 
 const scoresRouter = require('./routes/api/scores');
 const usersRouter = require('./routes/api/users');
+const spotRouter = require('./routes/api/spot')
 
 
 require('./config/database');
@@ -20,6 +21,7 @@ app.use(cors());
 
 app.use('/api/scores', scoresRouter);
 app.use('/api/users', usersRouter);
+app.use('/api/spot', spotRouter)
 
 const port = process.env.PORT || 3001;
 	
